@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 
 const Categories = ({ filterMenuItems, categories }) => {
-  const [isActive, setActive] = useState(false);
-  let active = '';
-  const toggleClass = (cat) => {
-    active = cat;
-    setActive(!isActive);
-  };
+  const [value, setValue] = useState(0);
 
   return (
     <div className='btn-container'>
@@ -14,11 +9,11 @@ const Categories = ({ filterMenuItems, categories }) => {
         return (
           <button
             type='button'
-            className={!isActive ? 'filter-btn active' : 'filter-btn'}
+            className={`filter-btn ${index === value ? 'active' : ''}`}
             key={index}
             onClick={() => {
               filterMenuItems(category);
-              toggleClass(category);
+              setValue(index);
             }}
           >
             {category}
