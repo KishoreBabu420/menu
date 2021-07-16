@@ -1,5 +1,9 @@
 import React from 'react';
 
+function formatToCurrency(amount) {
+  return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
+
 const Menu = ({ menuItems }) => {
   return (
     <div className='section-center'>
@@ -11,7 +15,7 @@ const Menu = ({ menuItems }) => {
             <div className='item-info'>
               <header>
                 <h4>{title}</h4>
-                <h4 className='price'>{price}</h4>
+                <h4 className='price'>₹ {formatToCurrency(price)}</h4>
               </header>
               <p className='item-text'>{desc}</p>
             </div>
