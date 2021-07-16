@@ -59,7 +59,7 @@ const menu = [
     id: 8,
     title: 'System Design',
     category: 'Programming',
-    price: 12.99,
+    price: 15999,
     img: 'https://res.cloudinary.com/vijayawada/image/upload/v1626363567/course/sd_maf7mu.png',
     desc: `Systems design is the process of defining the architecture, product design, modules, interfaces, and data for a system to satisfy specified requirements. Systems design could be seen as the application of systems theory to product development.`,
   },
